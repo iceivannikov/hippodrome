@@ -7,13 +7,13 @@
                 <Pattern>%d %p %c{1.}: %m%n</Pattern>
             </PatternLayout>
             <DefaultRolloverStrategy>
-                <Delete basePath = "logs" maxDepth = "2">
-                <IfFileName glob = "hippodrome.*.log"/>
-                <IfLastModified age="P7D"/>
-            </Delete>
-        </DefaultRolloverStrategy>
+                <Delete basePath="logs" maxDepth="2">
+                    <IfFileName glob="hippodrome.*.log"/>
+                    <IfLastModified age="P7D"/>
+                </Delete>
+            </DefaultRolloverStrategy>
             <Policies>
-                <SizeBasedTriggeringPolicy size="0.1 k"/>
+                <SizeBasedTriggeringPolicy size="0.5 k"/>
             </Policies>
         </RollingFile>
     </Appenders>
